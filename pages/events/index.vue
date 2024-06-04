@@ -1,5 +1,5 @@
 <template>
   <div>
-    index page
+    events index page
   </div>
 </template>
