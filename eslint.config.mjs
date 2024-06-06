@@ -1,5 +1,5 @@
-import stylistic from "@stylistic/eslint-plugin"
-import withNuxt from "./.nuxt/eslint.config.mjs"
+import stylistic from "@stylistic/eslint-plugin";
+import withNuxt from "./.nuxt/eslint.config.mjs";
 
 export default withNuxt(
   {
@@ -19,6 +19,7 @@ export default withNuxt(
   stylistic.configs.customize({
     indent: 2,
     quotes: "double",
-    semi: false,
+    // NOTE: false だとIDEのスタイルに合わないため、true にしている
+    semi: true,
   }),
-)
+);
