@@ -4,11 +4,14 @@
 //   layout: "false",
 // });
 const {sayGoodbye} = userUtils()
+const {$sayHello} = useNuxtApp()
 sayGoodbye()
+$sayHello("plugin test")
 </script>
 
 <template>
   <div>
     <AlertBlock />
+    <span></span>
   </div>
 </template>
