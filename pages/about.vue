@@ -1,19 +1,22 @@
+<!-- pages/about.vue -->
+<script setup lang="ts">
+const { color } = useColor();
+</script>
+
 <template>
   <div>
     <h2>About</h2>
-    <p>about page!</p>
+    <p class="state-color">
+      about page! state color: {{ color }}
+    </p>
   </div>
 </template>
-
-<script setup lang="ts">
-// export default {};
-</script>
 
 <style scoped>
 h2 {
   color: blue;
 }
-p {
-  color: red;
+.state-color {
+  color: v-bind(color)
 }
 </style>
