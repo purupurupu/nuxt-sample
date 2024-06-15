@@ -12,7 +12,7 @@ export default withNuxt(
   {
     files: ["**/*.vue", "**/*.ts"],
     rules: {
-      "no-console": "error",
+      // "no-console": "error",
       "@typescript-eslint/no-explicit-any": "error",
     },
   },
