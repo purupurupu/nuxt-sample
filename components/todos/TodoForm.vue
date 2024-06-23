@@ -3,15 +3,7 @@
 </script>
 
 <template>
-  <div>
-    <input
-      v-model="newTodo"
-      class="todo-input"
-      type="text"
-      placeholder="Add a new todo"
-      @keyup.enter="addTodo"
-    >
-  </div>
+  <div />
 </template>
 
 <style scoped>

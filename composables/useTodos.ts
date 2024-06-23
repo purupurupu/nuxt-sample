@@ -1,7 +1,11 @@
 import type { Todo } from "../types/todo.interface";
 
 export const useTodos = () => {
-  const todos = useState<Todo[]>("todos", () => []);
+  const todos = useState<Todo[]>("todos", () => [
+    { id: 1, title: "Learn Vue 3", completed: false },
+    { id: 2, title: "Learn TypeScript", completed: false },
+    { id: 3, title: "Learn Vite", completed: false },
+  ]);
 
   const addTodo = (title: string) => {
     todos.value.push({

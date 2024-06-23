@@ -1,11 +1,14 @@
 <script setup lang="ts">
 import TodoItem from "./TodoItem.vue";
+import type { Todo } from "~/types/todo.interface";
 
-const todos = [
-  { id: 1, title: "Learn Vue 3", completed: false },
-  { id: 2, title: "Learn TypeScript", completed: false },
-  { id: 3, title: "Learn Vite", completed: false },
-];
+defineProps<{
+  todos: Todo[];
+}>();
+
+defineEmits<{
+  (e: "toggle-todo" | "delete-todo", id: number): void;
+}>();
 </script>
 
 <template>
@@ -15,6 +18,8 @@ const todos = [
         v-for="todo in todos"
         :key="todo.id"
         :todo="todo"
+        @toggle-todo="$emit('toggle-todo', todo.id)"
+        @delete-todo="$emit('delete-todo', todo.id)"
       />
     </ul>
   </div>
