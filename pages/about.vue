@@ -1,6 +1,7 @@
 <!-- pages/about.vue -->
 <script setup lang="ts">
-const { color } = useColor();
+// const { color } = useColor();
+const color = useState("color");
 </script>
 
 <template>

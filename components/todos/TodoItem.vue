@@ -8,10 +8,24 @@ defineProps<{
 defineEmits<{
   (e: "toggle-todo" | "delete-todo"): void;
 }>();
+
+const newTodo = useState<string>("new-todo");
+
+console.log("todoItem", newTodo);
+
+const addTodo = () => {
+  if (newTodo.value) {
+    newTodo.value = newTodo.value + "!";
+  }
+};
 </script>
 
 <template>
   <li>
+    {{ newTodo }}
+    <button @click="addTodo">
+      add
+    </button>
     <input
       type="checkbox"
       :checked="todo.completed"

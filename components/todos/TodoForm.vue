@@ -3,7 +3,9 @@ const emit = defineEmits<{
   (e: "add-todo", title: string): void;
 }>();
 
-const newTodo = ref("");
+const newTodo = useState<string>("new-todo", () => "");
+
+console.log("todoForm", newTodo);
 
 const submitTodo = () => {
   if (newTodo.value) {
