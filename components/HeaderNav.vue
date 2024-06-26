@@ -11,6 +11,9 @@
         <NuxtLink to="/events">
           Events
         </NuxtLink>
+        <NuxtLink to="/todopage">
+          todopage
+        </NuxtLink>
       </li>
     </ul>
   </header>
