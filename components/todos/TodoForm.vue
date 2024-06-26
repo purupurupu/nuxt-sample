@@ -31,9 +31,22 @@ const submitTodo = () => {
 <style scoped>
 .todo-input {
   color:black;
-  padding: 1px;
+  padding: 5px 10px;
   font-size: 16px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  margin-right: 10px;
+}
+
+button{
+  padding: 5px 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover{
+  background-color: #6366c3;
 }
 </style>
