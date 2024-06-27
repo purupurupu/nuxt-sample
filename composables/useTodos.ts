@@ -1,6 +1,14 @@
 import type { Todo } from "../types/todo.interface";
 
-export const useTodos = () => {
+interface Todos {
+  todos: Ref<Todo[]>;
+  addTodo: (title: string) => void;
+  toggleTodo: (id: number) => void;
+  deleteTodo: (id: number) => void;
+
+}
+
+export const useTodos = (): Todos => {
   const todos = useState<Todo[]>("todos", () => [
     { id: 1, title: "Learn Vue 3", completed: false },
     { id: 2, title: "Learn TypeScript", completed: false },
@@ -8,6 +16,10 @@ export const useTodos = () => {
   ]);
 
   const addTodo = (title: string) => {
+    if (!title.trim()) {
+      console.warn("Todo title cannot be empty");
+      return;
+    }
     todos.value.push({
       id: todos.value.length + 1,
       title,
