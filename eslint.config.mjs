@@ -20,7 +20,7 @@ export default withNuxt(
   },
   stylistic.configs.customize({
     indent: 2,
-    quotes: "double",
+    quotes: "single",
     // NOTE: false だとIDEのスタイルに合わないため、true にしている
     semi: true,
   }),

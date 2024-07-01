@@ -13,6 +13,7 @@ const colorChange = () => {
     <button @click="colorChange">
       change to red
     </button>
+    <Button>Click Me!!</Button>
   </div>
 </template>
 
