@@ -1,16 +1,16 @@
 <script setup lang="ts">
 const emit = defineEmits<{
-  (e: "add-todo", title: string): void;
+  (e: 'add-todo', title: string): void;
 }>();
 
-const newTodo = useState<string>("new-todo", () => "");
+const newTodo = useState<string>('new-todo', () => '');
 
-console.log("todoForm", newTodo);
+console.log('todoForm', newTodo);
 
 const submitTodo = () => {
   if (newTodo.value) {
-    emit("add-todo", newTodo.value.trim());
-    newTodo.value = "";
+    emit('add-todo', newTodo.value.trim());
+    newTodo.value = '';
   }
 };
 </script>

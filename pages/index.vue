@@ -3,7 +3,7 @@
 const { color, setColor } = useColor();
 
 const colorChange = () => {
-  setColor("red");
+  setColor('red');
 };
 </script>
 

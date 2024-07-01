@@ -1,13 +1,13 @@
 <script setup lang="ts">
-import TodoItem from "./TodoItem.vue";
-import type { Todo } from "~/types/todo.interface";
+import TodoItem from './TodoItem.vue';
+import type { Todo } from '~/types/todo.interface';
 
 defineProps<{
   todos: Todo[];
 }>();
 
 defineEmits<{
-  (e: "toggle-todo" | "delete-todo", id: number): void;
+  (e: 'toggle-todo' | 'delete-todo', id: number): void;
 }>();
 </script>
 

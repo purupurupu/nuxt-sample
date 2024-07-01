@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import type { Todo } from "~/types/todo.interface";
+import type { Todo } from '~/types/todo.interface';
 
 defineProps<{
   todo: Todo;
 }>();
 
 defineEmits<{
-  (e: "toggle-todo" | "delete-todo"): void;
+  (e: 'toggle-todo' | 'delete-todo'): void;
 }>();
 </script>
 
