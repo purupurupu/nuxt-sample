@@ -3,7 +3,7 @@
 const { color, setColor } = useColor();
 
 const colorChange = () => {
-  setColor("red");
+  setColor('red');
 };
 </script>
 
@@ -13,6 +13,7 @@ const colorChange = () => {
     <button @click="colorChange">
       change to red
     </button>
+    <Button>Click Me!!</Button>
   </div>
 </template>
 

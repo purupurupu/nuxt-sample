@@ -1,8 +1,8 @@
 <script setup>
-import BaselineApple from "@/components/icons/BaselineApple.vue";
+import BaselineApple from '@/components/icons/BaselineApple.vue';
 
 definePageMeta({
-  layout: "custom",
+  layout: 'custom',
 });
 </script>
 

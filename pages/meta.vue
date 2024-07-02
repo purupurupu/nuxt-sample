@@ -1,12 +1,12 @@
 <script setup lang="ts">
 useHead({
-  title: "My App",
+  title: 'My App',
   meta: [
-    { name: "description", content: "My amazing site." },
+    { name: 'description', content: 'My amazing site.' },
   ],
   bodyAttrs: {
-    class: "test",
+    class: 'test',
   },
-  script: [{ innerHTML: "console.log('Hello world')" }],
+  script: [{ innerHTML: 'console.log(\'Hello world\')' }],
 });
 </script>

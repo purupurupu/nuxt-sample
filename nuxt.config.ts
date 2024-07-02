@@ -2,22 +2,33 @@
 export default defineNuxtConfig({
   app: {
     head: {
-      title: "Hello, Nuxt!",
-      meta: [{ name: "description", content: "this is a meta description" }],
+      title: 'Hello, Nuxt!',
+      meta: [{ name: 'description', content: 'this is a meta description' }],
     },
   },
   devtools: { enabled: true },
-  css: ["~/assets/css/main.css"],
+  css: ['~/assets/css/main.css'],
   postcss: {
     plugins: {
       tailwindcss: {},
       autoprefixer: {},
     },
   },
-  modules: ["@nuxt/eslint"],
+  modules: ['@nuxt/eslint', '@nuxtjs/tailwindcss', 'shadcn-nuxt'],
   eslint: {
     config: {
       stylistic: true,
     },
+  },
+  shadcn: {
+    /**
+     * Prefix for all the imported component
+     */
+    prefix: '',
+    /**
+     * Directory that the component lives in.
+     * @default "./components/ui"
+     */
+    componentDir: './components/ui',
   },
 });
