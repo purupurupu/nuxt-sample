@@ -1,7 +1,10 @@
+<script setup lang="ts">
+</script>
+
 <template>
   <!-- component以外へ反映される -->
-  <div class="h-screen">
-    <p>Defalut Layout</p>
+  <div class="flex items-start">
+    <Sidebar />
     <slot />
   </div>
 </template>
