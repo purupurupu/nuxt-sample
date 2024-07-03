@@ -1,10 +1,10 @@
 <script setup lang='ts'>
 const items = ref([
-  { title: 'Overview', path: '/overview' },
-  { title: 'Transactions', path: '/transactions' },
-  { title: 'Account', path: '/account' },
-  { title: 'Contacts', path: '/contacts' },
-  { title: 'Settings', path: '/settings' },
+  { title: 'Overview', path: '/overview', icon: 'ri:dashboard-line' },
+  { title: 'Transactions', path: '/transactions', icon: 'ri:bank-line' },
+  { title: 'Account', path: '/account', icon: 'ri:account-circle-line' },
+  { title: 'Contacts', path: '/contacts', icon: 'ri:contacts-line' },
+  { title: 'Settings', path: '/settings', icon: 'ri:settings-3-line' },
 ]);
 </script>
 
@@ -23,6 +23,11 @@ const items = ref([
           :key="index"
           class="flex items-center px-2 py-1 transition rounded cursor-pointer hover:bg-neutral-100"
         >
+          <Icon
+            size="20"
+            :name="item.icon ?? ''"
+            class="mr-2"
+          />
           <span>{{ item.title }}</span>
         </div>
       </div>
