@@ -13,7 +13,8 @@
 
 <style scoped>
 .logo{
-  width: 100px;
-  height: 100px;
-  display: block;}
+  width: 50px;
+  height: 50px;
+  display: block;
+}
 </style>
