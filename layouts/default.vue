@@ -2,8 +2,7 @@
 </script>
 
 <template>
-  <!-- component以外へ反映される -->
-  <div class="flex items-start">
+  <div class="flex items-center">
     <Sidebar />
     <slot />
   </div>
