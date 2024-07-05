@@ -2,7 +2,7 @@
 </script>
 
 <template>
-  <div class="flex items-center">
+  <div class="grid items-center lg:flex ">
     <Sidebar />
     <slot />
   </div>
