@@ -14,7 +14,7 @@ const open = ref(false);
       />
       <div
         v-if="open"
-        class="absolute top-0 left-0 z-50 w-full h-full bg-white"
+        class="absolute top-0 left-0 z-[999] w-full h-full bg-white "
       >
         <Icon
           class="absolute z-50 cursor-pointer right-4 top-4"
