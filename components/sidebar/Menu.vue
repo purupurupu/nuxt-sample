@@ -18,9 +18,10 @@ const items = ref([
     </header>
     <div class="px-4 grow">
       <div class="grid gap-2">
-        <div
+        <NuxtLink
           v-for="(item, index) in items"
           :key="index"
+          :href="item.path"
           class="flex items-center px-2 py-1 transition rounded cursor-pointer hover:bg-neutral-100"
         >
           <Icon
@@ -29,7 +30,7 @@ const items = ref([
             class="mr-2"
           />
           <span>{{ item.title }}</span>
-        </div>
+        </NuxtLink>
       </div>
     </div>
   </div>

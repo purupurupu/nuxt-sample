@@ -4,6 +4,8 @@
 <template>
   <div class="grid items-center lg:flex ">
     <Sidebar />
-    <slot />
+    <div class="p-8">
+      <slot />
+    </div>
   </div>
 </template>
