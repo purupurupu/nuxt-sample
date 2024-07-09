@@ -13,16 +13,26 @@
         aa
       </div>
     </header>
-    <main>
-      <div>
-        tabs today this week this month this year
+    <main class="grid gap-4">
+      <div class="flex items-center gap-4">
+        <div
+          v-for="(item, index) in 3"
+          :key="index"
+          class="w-[120px] h-[36px] bg-neutral-200"
+        />
       </div>
       <section>
-        Chart
+        <div class="w-full h-[360px] bg-neutral-200" />
       </section>
     </main>
     <footer>
-      I'll have 3 different cards
+      <div class="flex items-center gap-4">
+        <div
+          v-for="(item, index) in 3"
+          :key="index"
+          class="w-full h-[260px] bg-neutral-200"
+        />
+      </div>
     </footer>
   </div>
 </template>
