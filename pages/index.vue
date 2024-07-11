@@ -1,5 +1,10 @@
 <script setup lang="ts">
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+
+const list = [{ title: 'today', component: '<div>today</div>' },
+  { title: 'week', component: '<div>week</div>' },
+  { title: 'month', component: '<div>month</div>' },
+  { title: 'year', component: '<div>year</div>' }];
 </script>
 
 <template>
@@ -17,30 +22,22 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
         class="w-[400px]"
       >
         <TabsList>
-          <TabsTrigger value="account">
-            Account
-          </TabsTrigger>
-          <TabsTrigger value="password">
-            Password
+          <TabsTrigger
+            v-for="item, index in list"
+            :key="index"
+            :value="item.title"
+          >
+            {{ item.title }}
           </TabsTrigger>
         </TabsList>
-        <TabsContent value="account">
-          Make changes to your account here.
-        </TabsContent>
-        <TabsContent value="password">
-          Change your password here.
+        <TabsContent
+          v-for="item, index in list"
+          :key="index"
+          :value="item.title"
+        >
+          {{ item.component }}
         </TabsContent>
       </Tabs>
-      <!-- <div class="flex items-center gap-4">
-        <div
-          v-for="(item, index) in 3"
-          :key="index"
-          class="w-[120px] h-[36px] bg-neutral-200"
-        />
-      </div>
-      <section>
-        <div class="w-full h-[360px] bg-neutral-200" />
-      </section> -->
     </main>
     <footer>
       <div class="flex items-center gap-4">
